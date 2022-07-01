@@ -12,7 +12,7 @@ import Ordersscreen from './screens/Ordersscreen';
 import Adminscreen from './screens/Adminscreen';
 function App() {
   return (
-    <div className="App">
+    <div className="App img-fluid">
        <Navbar/>
 
        <BrowserRouter>

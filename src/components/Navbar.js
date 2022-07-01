@@ -7,10 +7,10 @@ export default function Navbar() {
   const { currentUser } = userstate;
   const dispatch = useDispatch()
   return (
-    <div>
+    <div className="bg-dark">
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
         <a className="navbar-brand" href="/">
-       Hurry Up....
+          Hurry Up....Take Italians
         </a>
         <button
           className="navbar-toggler"

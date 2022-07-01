@@ -13,19 +13,19 @@ export default function Cartscreen() {
     var subtotal = cartItems.reduce((x , item)=> x+item.price , 0)
     const dispatch = useDispatch()
     return (
-        <div>
+        <div className='bg-light container '>
             <div className="row justify-content-center p-2" data-aos='fade-down'>
 
                   <div className="col-md-6">
-                       <h2 style={{fontSize:'40px'}}>My Cart</h2>
+                    <h2 style={{ fontSize: '40px' }}>My Cart</h2>
                        
                        {cartItems.map(item=>{
                            return <div className="flex-container">
 
-                           <div className='text-left m-1 w-100'>
+                               <div className='text-left m-1 w-100'>
                                <h1>{item.name} [{item.varient}]</h1>
-                               <h1>Price : {item.quantity} * {item.prices[0][item.varient]} = {item.price}</h1>
-                               <h1 style={{display:'inline'}}>Quantity : </h1>
+                                   <p>Price : {item.quantity} * {item.prices[0][item.varient]} = {item.price}</p>
+                                   <p style={{ display: 'inline' }}>Quantity : </p>
                                <i className="fa fa-plus" aria-hidden="true" onClick={()=>{dispatch(addToCart(item , item.quantity+1 , item.varient))}}></i>
                                <b>{item.quantity}</b>
                                <i className="fa fa-minus" aria-hidden="true" onClick={()=>{dispatch(addToCart(item , item.quantity-1 , item.varient))}}></i>

@@ -28,7 +28,7 @@ export default function Pizza({ pizza }) {
   return (
     <div
      data-aos='zoom-in'
-      className="shadow-lg p-3 mb-5 bg-white rounded"
+      className="shadow-lg p-3 mb-5 bg-light rounded"
       key={pizza._id}
     >
       <div onClick={handleShow}>
